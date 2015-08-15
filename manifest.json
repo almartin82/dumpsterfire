@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "dumpsterfire",
+    "description": "vote with your...chrome extensions",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content_script.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab"
+    ]
+}
